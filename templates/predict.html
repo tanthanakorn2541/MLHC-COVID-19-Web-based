@@ -1,0 +1,17 @@
+{% extends 'index.html' %}
+
+{% block content%}
+
+    {% for image in Allimage %}
+        <img src="{{image}}" alt="imagename" width="250" height="250"></img>
+    {% endfor %}
+    <br>
+    {% for name in Allimagename %}
+        <p>{{name}}</p>
+    {% endfor %}
+    <br>
+    {% for result in Allresult %}
+        <p>{{result}}</p>
+    {% endfor %}
+
+{% endblock %}

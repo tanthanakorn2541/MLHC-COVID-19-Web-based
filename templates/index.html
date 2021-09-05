@@ -1,0 +1,29 @@
+
+{% extends 'layout.html' %}
+
+{% block content%}
+
+    {% for obj in Allobj %}
+        <div class="col-lg-6 center">
+            <div class="bg-black text-center h-100 project">
+                <div class="d-flex h-100">
+                    <div class="project-text w-100 my-auto text-center text-lg-left">
+                        <img class="img-fluid" src="{{obj.path}}" alt="imagename" width="300" height="100"/></div>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6">
+            <div class="bg-black text-center h-100 project">
+                <div class="d-flex h-100">
+                    <div class="project-text w-100 my-auto text-center text-lg-left">
+                        <h4 class="text-white">{{obj.result}}</h4>
+                        <p class="mb-0 text-white-50">{{obj.title}}</p>
+                        <hr class="d-none d-lg-block mb-0 ms-0" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- <img src="{{image}}" alt="imagename" width="250" height="250"></img> -->
+    {% endfor %}
+
+{% endblock %}
